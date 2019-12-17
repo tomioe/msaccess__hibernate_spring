@@ -6,6 +6,8 @@ Please see [this Medium article](https://medium.com/@tobias.strg/accessing-ms-ac
 
 This is only a bare-mininum implementation, and includes a sample database. Use `gradlew bootRun` to run the application.
 
-This project includes both examples of standard Spring queries (PartController) but also features examples of how (not) to do SQL queries (ParameterController).
+**To run this example, please insert the _absolute_ paths (e.g. "C:/git/msaccess__hibernate_spring/test.accdb") to the included test.accdb in this file:**
 
-To use your own Access database, change the reference in `src/main/resources/META-INF/persistence.xml` and `src\main\java\comp\project\backend\jpa\config\DataSourceConfig.java`.
+`src\main\java\comp\project\backend\jpa\config\DataSourceConfig.java`
+
+This project includes both examples of standard Spring queries (PartController) but also features examples of how (not) to do SQL queries (ParameterController).
