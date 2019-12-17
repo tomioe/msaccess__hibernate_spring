@@ -3,7 +3,7 @@
   <persistence-unit name="Comp_Project_DB_Backend_PersistenceUnit" transaction-type="RESOURCE_LOCAL">
     <provider>org.hibernate.ejb.HibernatePersistence</provider>
     <properties>
-      <property name="javax.persistence.jdbc.url" value="jdbc:ucanaccess://C:/<path to accdb>.accdb;showSchema=true"/>
+      <property name="javax.persistence.jdbc.url" value="jdbc:ucanaccess://./../../../../test.accdb;showSchema=true"/>
       <property name="javax.persistence.jdbc.user" value=""/>
       <property name="javax.persistence.jdbc.driver" value="net.ucanaccess.jdbc.UcanaccessDriver"/>
       <property name="javax.persistence.jdbc.password" value=""/>

@@ -28,11 +28,9 @@ public class ParameterController {
     private final String TABLE_NAME_METAPARTS = "MetaParts";
     private final String TABLE_NAME_PARTS = "Parts";
     private final String COLUMN_NAME_CLASS_1 = "Class I";
-    private final String COLUMN_NAME_CLASS_2 = "Class II";
     private final String COLUMN_NAME_TYPE = "Type";
     
     private final String classColumnsSQL = "["+COLUMN_NAME_CLASS_1+"], "
-                                        +"["+COLUMN_NAME_CLASS_2+"], "
                                         +"["+COLUMN_NAME_TYPE+"]";
     
     @Autowired
@@ -83,7 +81,7 @@ public class ParameterController {
                  + "FROM " + TABLE_NAME_METAPARTS + " "
                  + "WHERE ["+COLUMN_NAME_CLASS_1+"] IS NOT NULL",
                 (rs, rowNum) -> 
-                    new ClassParameter(rs.getString("Class I"), rs.getString("Class II"), rs.getString("Type"))
+                    new ClassParameter(rs.getString("Class I"), rs.getString("Type"))
             )
             .stream()
             .collect(Collectors.toList());
@@ -102,7 +100,7 @@ public class ParameterController {
                     + "FROM " + TABLE_NAME_METAPARTS + " "
                     + "WHERE [" + parameterName + "]= ?", new Object[] { parameterValue },
                     (rs, rowNow) ->
-                        new ClassParameter(rs.getString("Class I"), rs.getString("Class II"), rs.getString("Type"))
+                        new ClassParameter(rs.getString("Class I"), rs.getString("Type"))
             )
             .stream()
             .collect(Collectors.toList());

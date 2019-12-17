@@ -21,16 +21,11 @@ public class ClassParameter {
     @Column(name = "Class I")
     private String classI;
     
-    @NotNull
-    @Column(name = "Class II")
-    private String classII;
-
     @Column(name = "Type")
     private String type;
 
-    public ClassParameter(String classI, String classII, String type) {
+    public ClassParameter(String classI, String type) {
         this.classI = classI;
-        this.classII = classII;
         this.type = type;
     }
 

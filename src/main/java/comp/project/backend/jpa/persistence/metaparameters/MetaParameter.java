@@ -22,14 +22,9 @@ public class MetaParameter {
         this.parameterValue = parameterValue;
     }
 
-    
-    
     public MetaParameter(String parameterName, String parameterValue) {
         this.parameterName = parameterName;
         this.parameterValue = parameterValue;
     }
     
-    
-    
-
 }

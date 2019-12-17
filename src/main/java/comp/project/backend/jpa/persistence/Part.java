@@ -35,9 +35,6 @@ public class Part {
     @JsonProperty("sub_Type")
     private String subType;
     
-    @NotNull
-    @Column(name = "Value")
-    private String value;
     
 
     public Part() {
@@ -69,14 +66,6 @@ public class Part {
 
     public void setSubType(String subType) {
         this.subType = subType;
-    }
-
-    public String getValue() {
-        return value;
-    }
-
-    public void setValue(String value) {
-        this.value = value;
     }
 
     @Override

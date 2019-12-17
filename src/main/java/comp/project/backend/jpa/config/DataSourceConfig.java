@@ -15,7 +15,7 @@ public class DataSourceConfig {
     public DataSource createDataSource() throws Exception {
         ComboPooledDataSource ds = new ComboPooledDataSource();
         
-        ds.setJdbcUrl("jdbc:ucanaccess://c:/[path to access db].accdb");
+        ds.setJdbcUrl("jdbc:ucanaccess://./../../../../../../../test.accdb");
         ds.setDriverClass("net.ucanaccess.jdbc.UcanaccessDriver");
         
         return ds;
